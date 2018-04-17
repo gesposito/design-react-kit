@@ -1,0 +1,48 @@
+{
+  "name": "design-react-kit",
+  "version": "0.0.1",
+  "description": "Componenti React per Bootstrap 4",
+  "author": "Presidenza del Consiglio dei Ministri",
+  "license": "BSD-3-Clause",
+  "main": "dist/design-react-kit.cjs.js",
+  "module": "dist/design-react-kit.es.js",
+  "engines": {
+    "npm": "^5.0.0"
+  },
+  "scripts": {
+    "install-dependencies": "if [ ! -d node_modules ]; then npm install && npm-install-peers; fi",
+    "prebuild": "npm run install-dependencies",
+    "build": "rollup -c scripts/rollup.config.js",
+    "prestorybook": "npm run install-dependencies",
+    "storybook": "start-storybook -p 6006",
+    "storybook-build": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/italia/design-react-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/italia/design-react-kit/issues"
+  },
+  "homepage": "https://github.com/italia/design-react-kit#readme",
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-options": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/react": "^3.4.1",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-runtime": "^6.26.0",
+    "bootstrap-italia": "git+https://github.com/italia/bootstrap-italia.git",
+    "npm-install-peers": "^1.2.1",
+    "reactstrap": "^5.0.0",
+    "rollup": "^0.58.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  },
+  "dependencies": {}
+}
