@@ -10,15 +10,13 @@
     "npm": "^5.0.0"
   },
   "scripts": {
-    "install-dependencies":
-      "if [ ! -d node_modules ]; then npm install && npm-install-peers; fi",
+    "install-dependencies": "if [ ! -d node_modules ]; then npm install && npm-install-peers; fi",
     "prebuild": "npm run install-dependencies",
     "build": "rollup -c scripts/rollup.config.js",
     "prestorybook": "npm run install-dependencies",
     "storybook": "start-storybook -p 6006",
     "storybook-build": "build-storybook",
-    "storybook-deploy":
-      "gh-pages -d storybook-static -m 'Update GitHub Pages [ci skip]'"
+    "storybook-deploy": "gh-pages -d storybook-static -m 'Update GitHub Pages [ci skip]'"
   },
   "repository": {
     "type": "git",
@@ -37,11 +35,18 @@
     "@storybook/addons": "^3.4.1",
     "@storybook/react": "^3.4.1",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-runtime": "^6.26.0",
     "bootstrap-italia": "git+https://github.com/italia/bootstrap-italia.git",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^1.1.0",
     "npm-install-peers": "^1.2.1",
+    "prettier": "^1.12.1",
     "reactstrap": "^5.0.0",
     "rollup": "^0.58.0",
     "rollup-plugin-babel": "^3.0.3",
