@@ -10,14 +10,16 @@
     "npm": "^5.0.0"
   },
   "scripts": {
-    "install-dependencies": "if [ ! -d node_modules ]; then npm install && npm-install-peers; fi",
+    "install-dependencies":
+      "if [ ! -d node_modules ]; then npm install && npm-install-peers; fi",
     "prebuild": "npm run install-dependencies",
     "build": "rollup -c scripts/rollup.config.js",
     "prestorybook": "npm run install-dependencies",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "storybook:deploy": "gh-pages -d storybook-static -m 'Update GitHub Pages [ci skip]'",
-    "test": "react-scripts test --env=jsdom"
+    "storybook:deploy":
+      "gh-pages -d storybook-static -m 'Update GitHub Pages [ci skip]'",
+    "test": "CI=true react-scripts test --env=jsdom"
   },
   "repository": {
     "type": "git",
